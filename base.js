@@ -675,7 +675,7 @@ function update() {
 
 	$(".trade-tpdevice input").val("Trade a teleportation device for 2 diamond chicken meats ("+tpdevicestock+" left)");
 
-	if(rubysearchstep>0)document.title="Chickens!: The Quest of the Ruby Chicken Meat";
+	if(rubysearchstep>0)document.title="Chickens!: The Quest for the Ruby Chicken Meat";
 
 	if(getscroll) {
 		if(tool<=10)$("#craft-chickenators").show();
@@ -1104,7 +1104,8 @@ function trade(what) {
 			items[12].owned-=1;
 			items[24].owned+=1;
 			$(".notifications").html("Buying wheat to avoid irony");
-			//At first I plan chicken nuggets will be used for breeding :o
+			//At first I plan chicken nuggets will be used for breeding :o - Dev
+			//Haha, probably not a good idea to breed chickens by feeding them chicken - Me
 		}
 	}
 	else if(what=="medicine") {
@@ -2026,7 +2027,7 @@ function explorefurther() {
 	else if(kmexplored>=50 && kmexplored<80) { //intenser!!! (RIP English)
 		a=getRandomInt(3,7);
 		for(nbr=0;nbr<a;nbr++) {
-			b=getRandomInt(1,3);
+			b=getRandomInt(1,4);
 			if(b==1) {
 				if(Math.random()<0.5) {
 					makeenemy("Chicken",0,1,0);
@@ -2039,6 +2040,13 @@ function explorefurther() {
 				if(Math.random()<0.5) {
 					makeenemy("Iron Chicken",1,3,0);
 				}
+			}
+			else if(b==3) {
+				if(Math.random()<1) {
+					makeenemy("Dino Nugget", 1,100,0)
+					}
+				
+			}
 				else {
 					makeenemy("Angry Iron Chicken",1,3,2);
 				}
